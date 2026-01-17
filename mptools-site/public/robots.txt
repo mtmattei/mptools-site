@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mptools.ca/sitemap-index.xml

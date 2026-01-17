@@ -1,0 +1,403 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "MP Cutting Tools | Industrial Supplies & Tooling - Montreal";
+const description = "Your Montreal source for industrial supplies since 1991. Cutting tools, OEM fasteners, safety products, and more. Better pricing through 50+ supplier relationships.";
+---
+
+<Layout 
+    title={title} 
+    description={description}
+    lang="en"
+    alternateUrl="https://mptools.ca/fr"
+    alternateLang="fr"
+>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-top-bar">
+            <div class="nav-top-inner">
+                <span class="nav-top-text">Your industrial supply partner since 1991</span>
+                <div class="nav-top-contact">
+                    <a href="tel:+15143667000">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                        </svg>
+                        (514) 366-7000
+                    </a>
+                    <a href="mailto:alex@mpcuttingtools.ca">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        alex@mpcuttingtools.ca
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-main">
+            <a href="/" class="logo">
+                <div class="logo-mark">
+                    <span>MP</span>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">Cutting Tools</span>
+                    <span class="logo-tagline">Industrial Supplies</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="#products">Products</a>
+                <a href="#brands">Suppliers</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-right">
+                <div class="lang-toggle">
+                    <a href="/" class="active">EN</a>
+                    <a href="/fr">FR</a>
+                </div>
+                <a href="#contact" class="nav-cta">Get a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <div class="hero-badge">
+                        <span class="hero-badge-dot"></span>
+                        <span class="hero-badge-text">Montreal Industrial Supplies</span>
+                    </div>
+                    <h1>Your one call for <span class="highlight">industrial supplies.</span></h1>
+                    <p class="hero-description">
+                        Cutting tools, fasteners, safety gear, and everything in between. 
+                        34 years of supplier relationships means better pricing and faster sourcing—without the runaround.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">
+                            Request a Quote
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="tel:+15143667000" class="btn btn-outline">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                            </svg>
+                            Call Now
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="stats-panel">
+                        <div class="stats-header">
+                            <div class="stats-header-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            <span class="stats-header-text">By the Numbers</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-value">34<span>+</span></div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">50<span>+</span></div>
+                                <div class="stat-label">Supplier Partners</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">24<span>h</span></div>
+                                <div class="stat-label">Quote Turnaround</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">1<span>call</span></div>
+                                <div class="stat-label">That's All It Takes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bottom">
+            <div class="container">
+                <div class="hero-bottom-inner">
+                    <span class="hero-bottom-text">Serving <strong>Montreal, LaSalle, Dorval, Laval & Longueuil</strong></span>
+                    <div class="hero-bottom-categories">
+                        <span class="hero-bottom-category">Cutting Tools</span>
+                        <span class="hero-bottom-category">Fasteners</span>
+                        <span class="hero-bottom-category">Safety</span>
+                        <span class="hero-bottom-category">MRO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products/Services -->
+    <section class="services" id="products">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-header-left">
+                    <div class="section-label">What We Source</div>
+                    <h2 class="section-title">Full-Line Industrial Supply</h2>
+                </div>
+                <p class="section-subtitle">One supplier, thousands of products—at prices that make your purchasing department happy.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-number">01</span>
+                    <h3>Cutting Tools</h3>
+                    <p>End mills, drills, taps, reamers, inserts, boring bars. Carbide, HSS, coated—whatever your application demands.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-number">02</span>
+                    <h3>OEM Fasteners</h3>
+                    <p>Bolts, nuts, screws, rivets, anchors, and specialty fasteners. Standard and metric, in the quantities you need.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-number">03</span>
+                    <h3>Safety Products</h3>
+                    <p>PPE, eyewear, gloves, hearing protection, respirators, and hi-vis. Keep your team compliant and protected.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-number">04</span>
+                    <h3>Abrasives & Finishing</h3>
+                    <p>Grinding wheels, sanding discs, cutting wheels, wire brushes, and finishing compounds for any surface spec.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-number">05</span>
+                    <h3>Hand & Power Tools</h3>
+                    <p>Wrenches, screwdrivers, pliers, drills, grinders, and saws. Quality brands at distributor pricing.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-number">06</span>
+                    <h3>MRO & Shop Supplies</h3>
+                    <p>Lubricants, cleaners, tapes, markers, storage, and everything else that keeps a shop running.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="why-us">
+        <div class="container">
+            <div class="section-label">Why MP Cutting Tools</div>
+            <h2 class="section-title">The Sourcing Advantage</h2>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="why-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+                        </svg>
+                    </div>
+                    <h3>Better Pricing</h3>
+                    <p>Vendor-level relationships mean distributor pricing passed directly to you—across all categories.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3>Fast Turnaround</h3>
+                    <p>Quotes within 24 hours. We know downtime costs money and you need answers fast.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>One Contact</h3>
+                    <p>Stop managing multiple vendors. One call consolidates your tool list, fasteners, and safety orders.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="M21 21l-4.35-4.35"/>
+                        </svg>
+                    </div>
+                    <h3>Hard-to-Find Items</h3>
+                    <p>Obsolete part? Odd spec? We've been tracking these down since '91. Just ask.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands -->
+    <section class="brands" id="brands">
+        <div class="container">
+            <div class="brands-header">
+                <div class="section-label">Supplier Network</div>
+                <h2 class="section-title">Trusted Brands Across Categories</h2>
+                <p class="brands-description">Direct access to industry-leading manufacturers in cutting tools, fasteners, safety, and MRO. Browse their catalogs, then call us for better pricing.</p>
+            </div>
+            <div class="brands-grid">
+                <div class="brand-card">
+                    <span class="brand-name">Kennametal</span>
+                    <span class="brand-type">Cutting Tools</span>
+                </div>
+                <div class="brand-card">
+                    <span class="brand-name">Sandvik</span>
+                    <span class="brand-type">Cutting Tools</span>
+                </div>
+                <div class="brand-card">
+                    <span class="brand-name">Iscar</span>
+                    <span class="brand-type">Cutting Tools</span>
+                </div>
+                <div class="brand-card">
+                    <span class="brand-name">3M</span>
+                    <span class="brand-type">Safety & Abrasives</span>
+                </div>
+                <div class="brand-card">
+                    <span class="brand-name">Honeywell</span>
+                    <span class="brand-type">Safety Products</span>
+                </div>
+                <div class="brand-card">
+                    <span class="brand-name">Stanley</span>
+                    <span class="brand-type">Hand Tools</span>
+                </div>
+                <div class="brand-card">
+                    <span class="brand-name">DeWalt</span>
+                    <span class="brand-type">Power Tools</span>
+                </div>
+                <div class="brand-card">
+                    <span class="brand-name">Fastenal</span>
+                    <span class="brand-type">Fasteners</span>
+                </div>
+                <div class="brand-card">
+                    <span class="brand-name">Norton</span>
+                    <span class="brand-type">Abrasives</span>
+                </div>
+                <div class="brand-card">
+                    <span class="brand-name">+ Many More</span>
+                    <span class="brand-type">All Categories</span>
+                </div>
+            </div>
+            <div class="brands-footer">
+                <div class="brands-stat">
+                    <span class="brands-stat-number">50+</span>
+                    <span class="brands-stat-text">supplier relationships built since 1991</span>
+                </div>
+                <p class="brands-cta-text">Don't see what you need? <strong>We can source it.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="section-label">Get Started</div>
+                    <h2 class="section-title">Request a Quote</h2>
+                    <p>Send us your list—part numbers, quantities, brand preferences, whatever you've got. Cutting tools, fasteners, safety gear, or all of the above. We'll get back to you within 24 hours with competitive pricing.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-method-text">
+                                <span class="contact-method-label">Phone</span>
+                                <span class="contact-method-value"><a href="tel:+15143667000">(514) 366-7000</a></span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div class="contact-method-text">
+                                <span class="contact-method-label">Email</span>
+                                <span class="contact-method-value"><a href="mailto:alex@mpcuttingtools.ca">alex@mpcuttingtools.ca</a></span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="contact-method-text">
+                                <span class="contact-method-label">Service Area</span>
+                                <span class="contact-method-value">Montreal & Surrounding Regions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <div class="form-header">
+                        <h3>Quote Request</h3>
+                        <p>We respond within 24 hours</p>
+                    </div>
+                    <form action="https://formspree.io/f/xlgggvrv" method="POST">
+                        <input type="hidden" name="_subject" value="New Quote Request from mptools.ca">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company</label>
+                                <input type="text" id="company" name="company" placeholder="Company name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="you@company.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone" placeholder="(514) 555-0000">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group full">
+                                <label for="message">What Do You Need?</label>
+                                <textarea id="message" name="message" placeholder="Part numbers, quantities, brand preferences, product categories..." required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary">
+                                Submit Request
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="footer-logo-mark"><span>MP</span></div>
+                    <span class="footer-logo-text">Cutting Tools</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#products">Products</a>
+                    <a href="#brands">Suppliers</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-text">© 2025 MP Cutting Tools — Serving Montreal since 1991</div>
+            </div>
+        </div>
+    </footer>
+</Layout>
