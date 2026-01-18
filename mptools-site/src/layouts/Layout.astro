@@ -1,4 +1,9 @@
+Here's the corrected file — copy and paste the whole thing:
+
+```astro
 ---
+import '../styles/global.css';
+
 interface Props {
     title: string;
     description: string;
@@ -43,12 +48,12 @@ const {
     <meta property="og:description" content={description}>
     <meta property="og:type" content="website">
     <meta property="og:locale" content={lang === 'fr' ? 'fr_CA' : 'en_CA'}>
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="/src/styles/global.css">
 </head>
 <body>
     <div class="texture-overlay"></div>
     <slot />
 </body>
 </html>
+```
+
+Commit that, Cloudflare will rebuild, and your styles will load.
