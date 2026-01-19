@@ -1,60 +1,95 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
-const title = "MP Cutting Tools | Fournitures Industrielles - Montréal";
-const description = "Votre source montréalaise pour les fournitures industrielles depuis 1991. Outils de coupe, fixations OEM, produits de sécurité et plus. Meilleurs prix grâce à plus de 50 fournisseurs.";
+const phone = "(514) 555-1234";
+const email = "info@mptools.ca";
+const phoneHref = "tel:+15145551234";
+
+const specialties = [
+    {
+        title: "Outils de Coupe & Abrasifs",
+        description: "Plaquettes carbure, fraises, forets, meules—qualité production et maintenance"
+    },
+    {
+        title: "Fixations Sur Mesure",
+        description: "Métrique, impérial, grades spéciaux—conformes à vos spécifications"
+    },
+    {
+        title: "Sécurité & ÉPI",
+        description: "Gants, lunettes, protection auditive, respirateurs—certifiés CSA"
+    },
+    {
+        title: "MRO & Consolidation",
+        description: "Un seul appel pour tout—réduisez vos fournisseurs et la paperasse"
+    },
+    {
+        title: "Pièces Rares & Discontinuées",
+        description: "Pièces obsolètes, outils anciens—on les retrouve"
+    },
+    {
+        title: "Outils Manuels & Électriques",
+        description: "Milwaukee, DeWalt, Stanley—outils pro au prix distributeur"
+    }
+];
+
+const brands = [
+    "Kennametal", "Sandvik", "Iscar", "Walter", "Seco", "OSG",
+    "3M", "Honeywell", "MSA", "Norton", "Stanley", "DeWalt",
+    "Milwaukee", "Makita", "Widia", "Dormer", "Mitutoyo"
+];
+
+const industries = ["Ateliers d'Usinage", "Fabrication", "Équipes Maintenance", "Manufacturier", "Construction", "Aérospatiale"];
 ---
 
 <Layout 
-    title={title} 
-    description={description}
+    title="MP Cutting Tools | Outillage Industriel - Montréal"
+    description="Outillage industriel, équipement de sécurité et fournitures MRO. 34 ans d'approvisionnement auprès de 50+ fournisseurs. Soumissions en 24h. Grand Montréal."
     lang="fr"
-    alternateUrl="https://mptools.ca/"
+    alternateUrl="/"
     alternateLang="en"
 >
     <!-- Navigation -->
     <nav>
         <div class="nav-top-bar">
             <div class="nav-top-inner">
-                <span class="nav-top-text">Votre partenaire en fournitures industrielles depuis 1991</span>
+                <div class="nav-top-text">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                    </svg>
+                    Direct au propriétaire — réponses rapides, sans intermédiaire
+                </div>
                 <div class="nav-top-contact">
-                    <a href="tel:+15143667000">
+                    <a href={phoneHref}>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
                         </svg>
-                        (514) 366-7000
+                        {phone}
                     </a>
-                    <a href="mailto:alex@mpcuttingtools.ca">
+                    <a href={`mailto:${email}`}>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                             <polyline points="22,6 12,13 2,6"/>
                         </svg>
-                        alex@mpcuttingtools.ca
+                        {email}
                     </a>
                 </div>
             </div>
         </div>
         <div class="nav-main">
-            <a href="/fr" class="logo">
-                <div class="logo-mark">
-                    <span>MP</span>
+            <div class="nav-inner">
+                <a href="/fr" class="logo">
+                    <div class="logo-mark">MP</div>
+                    <span class="logo-text">Cutting Tools</span>
+                </a>
+                <div class="nav-links">
+                    <a href="#products">Produits</a>
+                    <a href="#brands">Fournisseurs</a>
+                    <a href="#quote" class="nav-cta">Soumission</a>
+                    <div class="lang-toggle">
+                        <a href="/">EN</a>
+                        <a href="/fr" class="active">FR</a>
+                    </div>
                 </div>
-                <div class="logo-text">
-                    <span class="logo-name">Cutting Tools</span>
-                    <span class="logo-tagline">Fournitures Industrielles</span>
-                </div>
-            </a>
-            <div class="nav-links">
-                <a href="#produits">Produits</a>
-                <a href="#fournisseurs">Fournisseurs</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="nav-right">
-                <div class="lang-toggle">
-                    <a href="/">EN</a>
-                    <a href="/fr" class="active">FR</a>
-                </div>
-                <a href="#contact" class="nav-cta">Soumission</a>
             </div>
         </div>
     </nav>
@@ -63,301 +98,226 @@ const description = "Votre source montréalaise pour les fournitures industriell
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-left">
-                    <div class="hero-badge">
-                        <span class="hero-badge-dot"></span>
-                        <span class="hero-badge-text">Fournitures Industrielles Montréal</span>
-                    </div>
-                    <h1>Un seul appel pour vos <span class="highlight">fournitures industrielles.</span></h1>
-                    <p class="hero-description">
-                        Outils de coupe, fixations, équipements de sécurité et tout le reste. 
-                        34 ans de relations avec nos fournisseurs signifient de meilleurs prix et un approvisionnement plus rapide—sans complications.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="#contact" class="btn btn-primary">
-                            Demander une Soumission
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                <path d="M5 12h14M12 5l7 7-7 7"/>
-                            </svg>
-                        </a>
-                        <a href="tel:+15143667000" class="btn btn-outline">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
-                            </svg>
-                            Appelez-nous
-                        </a>
-                    </div>
+                <div class="hero-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                    </svg>
+                    Direct au Propriétaire
                 </div>
-                <div class="hero-right">
-                    <div class="stats-panel">
-                        <div class="stats-header">
-                            <div class="stats-header-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                                </svg>
-                            </div>
-                            <span class="stats-header-text">En Chiffres</span>
-                        </div>
-                        <div class="stats-grid">
-                            <div class="stat-item">
-                                <div class="stat-value">34<span>+</span></div>
-                                <div class="stat-label">Ans d'Expérience</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-value">50<span>+</span></div>
-                                <div class="stat-label">Fournisseurs Partenaires</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-value">24<span>h</span></div>
-                                <div class="stat-label">Délai de Soumission</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-value">1<span>appel</span></div>
-                                <div class="stat-label">C'est Tout</div>
-                            </div>
-                        </div>
-                    </div>
+                <h1>Meilleurs Prix.<br><span>Parce Qu'on Sait Où Chercher.</span></h1>
+                <p>Outillage industriel, équipement de sécurité et fournitures MRO. 34 ans d'approvisionnement auprès de 50+ fournisseurs—la bonne pièce au bon prix, rapidement.</p>
+                <div class="hero-cta">
+                    <a href="#quote" class="btn btn-primary">
+                        Demander Soumission
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href={phoneHref} class="btn btn-outline">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                        </svg>
+                        Appelez-nous
+                    </a>
                 </div>
             </div>
-        </div>
-        <div class="hero-bottom">
-            <div class="container">
-                <div class="hero-bottom-inner">
-                    <span class="hero-bottom-text">Nous desservons <strong>Montréal, LaSalle, Dorval, Laval et Longueuil</strong></span>
-                    <div class="hero-bottom-categories">
-                        <span class="hero-bottom-category">Outils de Coupe</span>
-                        <span class="hero-bottom-category">Fixations</span>
-                        <span class="hero-bottom-category">Sécurité</span>
-                        <span class="hero-bottom-category">MRO</span>
-                    </div>
+            <div class="hero-image">
+                <div class="hero-image-placeholder">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
+                    </svg>
+                </div>
+                <div class="hero-image-badge">
+                    <span>34</span>
+                    Ans d'Expérience
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Products/Services -->
-    <section class="services" id="produits">
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Envoyez Votre Liste</h3>
+                    <p>Numéros de pièces, photos, PDFs—ce que vous avez</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>On Confirme les Détails</h3>
+                    <p>Disponibilité, alternatives, délais—tout vérifié</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Soumission en 24h</h3>
+                    <p>Livraison ou ramassage dans le Grand Montréal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We're Best At -->
+    <section class="specialties" id="products">
         <div class="container">
             <div class="section-header">
-                <div class="section-header-left">
-                    <div class="section-label">Ce Que Nous Offrons</div>
-                    <h2 class="section-title">Gamme Complète de Fournitures</h2>
-                </div>
-                <p class="section-subtitle">Un seul fournisseur, des milliers de produits—à des prix qui plairont à votre département des achats.</p>
+                <span class="section-label">Nos Spécialités</span>
+                <h2 class="section-title">Approvisionnement Spécialisé</h2>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <span class="service-number">01</span>
-                    <h3>Outils de Coupe</h3>
-                    <p>Fraises, forets, tarauds, alésoirs, plaquettes, barres d'alésage. Carbure, HSS, revêtus—selon vos besoins.</p>
-                </div>
-                <div class="service-card">
-                    <span class="service-number">02</span>
-                    <h3>Fixations OEM</h3>
-                    <p>Boulons, écrous, vis, rivets, ancrages et fixations spécialisées. Standards et métriques, dans les quantités requises.</p>
-                </div>
-                <div class="service-card">
-                    <span class="service-number">03</span>
-                    <h3>Produits de Sécurité</h3>
-                    <p>EPI, lunettes, gants, protection auditive, respirateurs et vêtements haute visibilité. Gardez votre équipe conforme et protégée.</p>
-                </div>
-                <div class="service-card">
-                    <span class="service-number">04</span>
-                    <h3>Abrasifs et Finition</h3>
-                    <p>Meules, disques de ponçage, disques à tronçonner, brosses métalliques et composés de finition pour toutes les spécifications.</p>
-                </div>
-                <div class="service-card">
-                    <span class="service-number">05</span>
-                    <h3>Outils Manuels et Électriques</h3>
-                    <p>Clés, tournevis, pinces, perceuses, meuleuses et scies. Marques de qualité aux prix distributeur.</p>
-                </div>
-                <div class="service-card">
-                    <span class="service-number">06</span>
-                    <h3>MRO et Fournitures d'Atelier</h3>
-                    <p>Lubrifiants, nettoyants, rubans, marqueurs, rangement et tout ce qui fait fonctionner un atelier.</p>
+            <div class="specialties-grid">
+                {specialties.map((specialty) => (
+                    <div class="specialty-card">
+                        <div class="specialty-image-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <circle cx="8.5" cy="8.5" r="1.5"/>
+                                <polyline points="21 15 16 10 5 21"/>
+                            </svg>
+                        </div>
+                        <div class="specialty-content">
+                            <h3>{specialty.title}</h3>
+                            <p>{specialty.description}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Strip -->
+    <section class="industries">
+        <div class="container">
+            <div class="industries-inner">
+                <span class="industries-label">Industries Desservies:</span>
+                <div class="industries-list">
+                    {industries.map((industry) => (
+                        <span>{industry}</span>
+                    ))}
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Us -->
-    <section class="why-us">
+    <!-- Image Showcase -->
+    <section class="showcase">
         <div class="container">
-            <div class="section-label">Pourquoi MP Cutting Tools</div>
-            <h2 class="section-title">L'Avantage de l'Approvisionnement</h2>
-            <div class="why-grid">
-                <div class="why-item">
-                    <div class="why-icon">
+            <div class="showcase-grid">
+                <div class="showcase-images">
+                    <div class="showcase-img-placeholder">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
                         </svg>
                     </div>
-                    <h3>Meilleurs Prix</h3>
-                    <p>Nos relations privilégiées avec les fournisseurs signifient des prix distributeur passés directement à vous—dans toutes les catégories.</p>
+                    <div class="showcase-img-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                    </div>
+                    <div class="showcase-img-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                    </div>
                 </div>
-                <div class="why-item">
-                    <div class="why-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="12 6 12 12 16 14"/>
-                        </svg>
+                <div class="showcase-content">
+                    <h2>La Précision Compte.<br>Le Prix Aussi.</h2>
+                    <p>Depuis 1991, nous sommes le partenaire d'approvisionnement de confiance des ateliers montréalais. Un seul point de contact de la soumission à la livraison. Sans intermédiaire.</p>
+                    <div class="showcase-stats">
+                        <div class="stat">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Partenaires Fournisseurs</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">24h</div>
+                            <div class="stat-label">Délai de Soumission</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">34</div>
+                            <div class="stat-label">Années en Affaires</div>
+                        </div>
                     </div>
-                    <h3>Rapidité</h3>
-                    <p>Soumissions en 24 heures. Nous savons que les temps d'arrêt coûtent cher et que vous avez besoin de réponses rapides.</p>
-                </div>
-                <div class="why-item">
-                    <div class="why-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
-                            <circle cx="9" cy="7" r="4"/>
-                            <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
-                        </svg>
-                    </div>
-                    <h3>Un Seul Contact</h3>
-                    <p>Arrêtez de gérer plusieurs fournisseurs. Un appel consolide vos outils, fixations et commandes de sécurité.</p>
-                </div>
-                <div class="why-item">
-                    <div class="why-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="11" cy="11" r="8"/>
-                            <path d="M21 21l-4.35-4.35"/>
-                        </svg>
-                    </div>
-                    <h3>Articles Difficiles à Trouver</h3>
-                    <p>Pièce obsolète? Spécification inhabituelle? Nous les trouvons depuis '91. Demandez-nous.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Brands -->
-    <section class="brands" id="fournisseurs">
+    <section class="brands" id="brands">
         <div class="container">
             <div class="brands-header">
-                <div class="section-label">Réseau de Fournisseurs</div>
-                <h2 class="section-title">Marques de Confiance Dans Toutes les Catégories</h2>
-                <p class="brands-description">Accès direct aux fabricants de premier plan en outils de coupe, fixations, sécurité et MRO. Consultez leurs catalogues, puis appelez-nous pour de meilleurs prix.</p>
+                <span class="section-label">Réseau de Fournisseurs</span>
+                <h2 class="section-title">50+ Marques Disponibles</h2>
+                <p>Accès autorisé aux manufacturiers leaders de l'industrie</p>
             </div>
             <div class="brands-grid">
-                <div class="brand-card">
-                    <span class="brand-name">Kennametal</span>
-                    <span class="brand-type">Outils de Coupe</span>
-                </div>
-                <div class="brand-card">
-                    <span class="brand-name">Sandvik</span>
-                    <span class="brand-type">Outils de Coupe</span>
-                </div>
-                <div class="brand-card">
-                    <span class="brand-name">Iscar</span>
-                    <span class="brand-type">Outils de Coupe</span>
-                </div>
-                <div class="brand-card">
-                    <span class="brand-name">3M</span>
-                    <span class="brand-type">Sécurité & Abrasifs</span>
-                </div>
-                <div class="brand-card">
-                    <span class="brand-name">Honeywell</span>
-                    <span class="brand-type">Produits de Sécurité</span>
-                </div>
-                <div class="brand-card">
-                    <span class="brand-name">Stanley</span>
-                    <span class="brand-type">Outils Manuels</span>
-                </div>
-                <div class="brand-card">
-                    <span class="brand-name">DeWalt</span>
-                    <span class="brand-type">Outils Électriques</span>
-                </div>
-                <div class="brand-card">
-                    <span class="brand-name">Fastenal</span>
-                    <span class="brand-type">Fixations</span>
-                </div>
-                <div class="brand-card">
-                    <span class="brand-name">Norton</span>
-                    <span class="brand-type">Abrasifs</span>
-                </div>
-                <div class="brand-card">
-                    <span class="brand-name">+ Plusieurs Autres</span>
-                    <span class="brand-type">Toutes Catégories</span>
-                </div>
+                {brands.map((brand) => (
+                    <div class="brand-card"><span>{brand}</span></div>
+                ))}
+                <div class="brand-card more"><span>+ Plusieurs Autres</span></div>
             </div>
-            <div class="brands-footer">
-                <div class="brands-stat">
-                    <span class="brands-stat-number">50+</span>
-                    <span class="brands-stat-text">relations fournisseurs bâties depuis 1991</span>
-                </div>
-                <p class="brands-cta-text">Vous ne trouvez pas ce qu'il vous faut? <strong>Nous pouvons le trouver.</strong></p>
-            </div>
+            <p class="brands-note">Votre marque n'apparaît pas? On peut probablement la trouver. Demandez-nous.</p>
         </div>
     </section>
 
-    <!-- Contact -->
-    <section class="contact" id="contact">
+    <!-- Quote Section -->
+    <section class="quote-section" id="quote">
         <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="section-label">Commencer</div>
-                    <h2 class="section-title">Demander une Soumission</h2>
-                    <p>Envoyez-nous votre liste—numéros de pièces, quantités, préférences de marques, tout ce que vous avez. Outils de coupe, fixations, équipements de sécurité, ou tout à la fois. Nous vous répondrons dans les 24 heures avec des prix compétitifs.</p>
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <div class="contact-method-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
-                                </svg>
-                            </div>
-                            <div class="contact-method-text">
-                                <span class="contact-method-label">Téléphone</span>
-                                <span class="contact-method-value"><a href="tel:+15143667000">(514) 366-7000</a></span>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <div class="contact-method-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                    <polyline points="22,6 12,13 2,6"/>
-                                </svg>
-                            </div>
-                            <div class="contact-method-text">
-                                <span class="contact-method-label">Courriel</span>
-                                <span class="contact-method-value"><a href="mailto:alex@mpcuttingtools.ca">alex@mpcuttingtools.ca</a></span>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <div class="contact-method-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                                    <circle cx="12" cy="10" r="3"/>
-                                </svg>
-                            </div>
-                            <div class="contact-method-text">
-                                <span class="contact-method-label">Zone de Service</span>
-                                <span class="contact-method-value">Montréal et Régions Environnantes</span>
-                            </div>
-                        </div>
+            <div class="quote-grid">
+                <div class="quote-content">
+                    <div class="quote-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                        </svg>
+                        Direct au Propriétaire
+                    </div>
+                    <h2>Obtenez Votre Soumission</h2>
+                    <p>Envoyez-nous votre liste de pièces, BOM, ou même une photo d'étiquette. On confirme la disponibilité, suggère des alternatives si nécessaire, et vous fournit un prix en 24 heures.</p>
+                    <div class="quote-contact">
+                        <a href={phoneHref}>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                            </svg>
+                            {phone}
+                        </a>
+                        <a href={`mailto:${email}`}>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            {email}
+                        </a>
                     </div>
                 </div>
-                <div class="contact-form-wrapper">
-                    <div class="form-header">
-                        <h3>Demande de Soumission</h3>
-                        <p>Nous répondons dans les 24 heures</p>
-                    </div>
-                    <form action="https://formspree.io/f/xlgggvrv" method="POST">
-                        <input type="hidden" name="_subject" value="Nouvelle Demande de Soumission - mptools.ca">
-                        <input type="hidden" name="_language" value="fr">
+                <div class="quote-form-wrapper">
+                    <form class="quote-form" name="quote-fr" method="POST" data-netlify="true" enctype="multipart/form-data">
+                        <input type="hidden" name="form-name" value="quote-fr" />
+                        <h3>Soumission Liste de Pièces</h3>
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="name">Nom</label>
-                                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                                <label for="name">Votre Nom</label>
+                                <input type="text" id="name" name="name" placeholder="Jean Tremblay" required>
                             </div>
                             <div class="form-group">
                                 <label for="company">Entreprise</label>
-                                <input type="text" id="company" name="company" placeholder="Nom de l'entreprise">
+                                <input type="text" id="company" name="company" placeholder="ABC Manufacturier">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="email">Courriel</label>
-                                <input type="email" id="email" name="email" placeholder="vous@entreprise.com" required>
+                                <input type="email" id="email" name="email" placeholder="jean@entreprise.com" required>
                             </div>
                             <div class="form-group">
                                 <label for="phone">Téléphone</label>
@@ -366,9 +326,31 @@ const description = "Votre source montréalaise pour les fournitures industriell
                         </div>
                         <div class="form-row">
                             <div class="form-group full">
-                                <label for="message">De Quoi Avez-Vous Besoin?</label>
-                                <textarea id="message" name="message" placeholder="Numéros de pièces, quantités, préférences de marques, catégories de produits..." required></textarea>
+                                <label for="parts">Liste de Pièces</label>
+                                <textarea id="parts" name="parts" placeholder="Numéro de Pièce, Qté, Marque (une par ligne)&#10;Exemple:&#10;CNMG120408, 50, Sandvik&#10;Fraise 1/2 4FL, 10, Indifférent"></textarea>
+                                <small>Collez numéros de pièces, quantités, marques—ou décrivez vos besoins</small>
                             </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="needby">Date Requise</label>
+                                <input type="date" id="needby" name="needby">
+                            </div>
+                            <div class="form-group">
+                                <label for="postal">Code Postal Livraison</label>
+                                <input type="text" id="postal" name="postal" placeholder="H3B 1A7">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group full">
+                                <label for="files">Fichiers (Optionnel)</label>
+                                <input type="file" id="files" name="files" accept=".pdf,.png,.jpg,.jpeg,.xlsx,.csv" multiple>
+                                <small>PDF, image, feuille BOM, ou photo d'étiquette</small>
+                            </div>
+                        </div>
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="alternates" name="alternates">
+                            <label for="alternates">Accepte des alternatives si l'original est indisponible</label>
                         </div>
                         <div class="form-submit">
                             <button type="submit" class="btn btn-primary">
@@ -389,16 +371,28 @@ const description = "Votre source montréalaise pour les fournitures industriell
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <div class="footer-logo-mark"><span>MP</span></div>
+                    <div class="footer-logo-mark">MP</div>
                     <span class="footer-logo-text">Cutting Tools</span>
                 </div>
                 <div class="footer-links">
-                    <a href="#produits">Produits</a>
-                    <a href="#fournisseurs">Fournisseurs</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#products">Produits</a>
+                    <a href="#brands">Fournisseurs</a>
+                    <a href="#quote">Soumission</a>
                 </div>
                 <div class="footer-text">© 2025 MP Cutting Tools — Au service de Montréal depuis 1991</div>
             </div>
         </div>
     </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </Layout>
