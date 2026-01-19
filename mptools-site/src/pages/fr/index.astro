@@ -1,34 +1,40 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
-const phone = "(514) 555-1234";
-const email = "info@mptools.ca";
-const phoneHref = "tel:+15145551234";
+const phone = "(514) 366-7000";
+const email = "alex@mpcuttingtools.ca";
+const phoneHref = "tel:+15143667000";
 
 const specialties = [
     {
         title: "Outils de Coupe & Abrasifs",
-        description: "Plaquettes carbure, fraises, forets, meules—qualité production et maintenance"
+        description: "Plaquettes carbure, fraises, forets, meules—qualité production et maintenance",
+        image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&q=85"
     },
     {
         title: "Fixations Sur Mesure",
-        description: "Métrique, impérial, grades spéciaux—conformes à vos spécifications"
+        description: "Métrique, impérial, grades spéciaux—conformes à vos spécifications",
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=85"
     },
     {
         title: "Sécurité & ÉPI",
-        description: "Gants, lunettes, protection auditive, respirateurs—certifiés CSA"
+        description: "Gants, lunettes, protection auditive, respirateurs—certifiés CSA",
+        image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=85"
     },
     {
         title: "MRO & Consolidation",
-        description: "Un seul appel pour tout—réduisez vos fournisseurs et la paperasse"
+        description: "Un seul appel pour tout—réduisez vos fournisseurs et la paperasse",
+        image: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&q=85"
     },
     {
         title: "Pièces Rares & Discontinuées",
-        description: "Pièces obsolètes, outils anciens—on les retrouve"
+        description: "Pièces obsolètes, outils anciens—on les retrouve",
+        image: "https://images.unsplash.com/photo-1597484661643-2f5fef640dd1?w=600&q=85"
     },
     {
         title: "Outils Manuels & Électriques",
-        description: "Milwaukee, DeWalt, Stanley—outils pro au prix distributeur"
+        description: "Milwaukee, DeWalt, Stanley—outils pro au prix distributeur",
+        image: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&q=85"
     }
 ];
 
@@ -122,12 +128,7 @@ const industries = ["Ateliers d'Usinage", "Fabrication", "Équipes Maintenance",
                 </div>
             </div>
             <div class="hero-image">
-                <div class="hero-image-placeholder">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <circle cx="12" cy="12" r="3"/>
-                        <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
-                    </svg>
-                </div>
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=85" alt="Usinage CNC de précision" class="hero-image-main">
                 <div class="hero-image-badge">
                     <span>34</span>
                     Ans d'Expérience
@@ -173,13 +174,7 @@ const industries = ["Ateliers d'Usinage", "Fabrication", "Équipes Maintenance",
             <div class="specialties-grid">
                 {specialties.map((specialty) => (
                     <div class="specialty-card">
-                        <div class="specialty-image-placeholder">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                                <circle cx="8.5" cy="8.5" r="1.5"/>
-                                <polyline points="21 15 16 10 5 21"/>
-                            </svg>
-                        </div>
+                        <img src={specialty.image} alt={specialty.title} class="specialty-image">
                         <div class="specialty-content">
                             <h3>{specialty.title}</h3>
                             <p>{specialty.description}</p>
@@ -209,27 +204,9 @@ const industries = ["Ateliers d'Usinage", "Fabrication", "Équipes Maintenance",
         <div class="container">
             <div class="showcase-grid">
                 <div class="showcase-images">
-                    <div class="showcase-img-placeholder">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                            <circle cx="8.5" cy="8.5" r="1.5"/>
-                            <polyline points="21 15 16 10 5 21"/>
-                        </svg>
-                    </div>
-                    <div class="showcase-img-placeholder">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                            <circle cx="8.5" cy="8.5" r="1.5"/>
-                            <polyline points="21 15 16 10 5 21"/>
-                        </svg>
-                    </div>
-                    <div class="showcase-img-placeholder">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                            <circle cx="8.5" cy="8.5" r="1.5"/>
-                            <polyline points="21 15 16 10 5 21"/>
-                        </svg>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&q=85" alt="Centre d'usinage CNC" class="showcase-img">
+                    <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&q=85" alt="Outillage de précision" class="showcase-img">
+                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&q=85" alt="Fabrication industrielle" class="showcase-img">
                 </div>
                 <div class="showcase-content">
                     <h2>La Précision Compte.<br>Le Prix Aussi.</h2>
