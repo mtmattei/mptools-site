@@ -1,34 +1,40 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from '../layouts/Layout.astro';
 
-const phone = "(514) 555-1234";
-const email = "info@mptools.ca";
-const phoneHref = "tel:+15145551234";
+const phone = "(514) 366-7000";
+const email = "alex@mpcuttingtools.ca";
+const phoneHref = "tel:+15143667000";
 
 const specialties = [
     {
-        title: "Outils de Coupe & Abrasifs",
-        description: "Plaquettes carbure, fraises, forets, meules—qualité production et maintenance"
+        title: "Cutting Tools & Abrasives",
+        description: "Carbide inserts, end mills, drills, grinding wheels—production and maintenance grades",
+        image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&q=85"
     },
     {
-        title: "Fixations Sur Mesure",
-        description: "Métrique, impérial, grades spéciaux—conformes à vos spécifications"
+        title: "Fasteners to Match Spec",
+        description: "Metric, imperial, specialty grades—matching your existing specs exactly",
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=85"
     },
     {
-        title: "Sécurité & ÉPI",
-        description: "Gants, lunettes, protection auditive, respirateurs—certifiés CSA"
+        title: "Safety & PPE for Shops",
+        description: "Gloves, eyewear, hearing protection, respirators—CSA approved",
+        image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=85"
     },
     {
-        title: "MRO & Consolidation",
-        description: "Un seul appel pour tout—réduisez vos fournisseurs et la paperasse"
+        title: "MRO & Vendor Consolidation",
+        description: "One call for everything—reduce your vendor count and paperwork",
+        image: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&q=85"
     },
     {
-        title: "Pièces Rares & Discontinuées",
-        description: "Pièces obsolètes, outils anciens—on les retrouve"
+        title: "Hard-to-Find & Discontinued",
+        description: "Legacy parts, obsolete tools—we'll track it down",
+        image: "https://images.unsplash.com/photo-1597484661643-2f5fef640dd1?w=600&q=85"
     },
     {
-        title: "Outils Manuels & Électriques",
-        description: "Milwaukee, DeWalt, Stanley—outils pro au prix distributeur"
+        title: "Hand & Power Tools",
+        description: "Milwaukee, DeWalt, Stanley—pro-grade tools at distributor pricing",
+        image: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&q=85"
     }
 ];
 
@@ -38,15 +44,15 @@ const brands = [
     "Milwaukee", "Makita", "Widia", "Dormer", "Mitutoyo"
 ];
 
-const industries = ["Ateliers d'Usinage", "Fabrication", "Équipes Maintenance", "Manufacturier", "Construction", "Aérospatiale"];
+const industries = ["Machine Shops", "Fabrication", "Maintenance Teams", "Manufacturing", "Construction", "Aerospace"];
 ---
 
 <Layout 
-    title="MP Cutting Tools | Outillage Industriel - Montréal"
-    description="Outillage industriel, équipement de sécurité et fournitures MRO. 34 ans d'approvisionnement auprès de 50+ fournisseurs. Soumissions en 24h. Grand Montréal."
-    lang="fr"
-    alternateUrl="/"
-    alternateLang="en"
+    title="MP Cutting Tools | Industrial Supplies & Tooling - Montreal"
+    description="Industrial tooling, safety equipment, and MRO supplies. 34 years of sourcing from 50+ suppliers. Get quotes in 24 hours. Serving Greater Montreal."
+    lang="en"
+    alternateUrl="/fr"
+    alternateLang="fr"
 >
     <!-- Navigation -->
     <nav>
@@ -56,7 +62,7 @@ const industries = ["Ateliers d'Usinage", "Fabrication", "Équipes Maintenance",
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                         <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
                     </svg>
-                    Direct au propriétaire — réponses rapides, sans intermédiaire
+                    Direct to owner — fast answers, no handoffs
                 </div>
                 <div class="nav-top-contact">
                     <a href={phoneHref}>
@@ -77,17 +83,17 @@ const industries = ["Ateliers d'Usinage", "Fabrication", "Équipes Maintenance",
         </div>
         <div class="nav-main">
             <div class="nav-inner">
-                <a href="/fr" class="logo">
+                <a href="/" class="logo">
                     <div class="logo-mark">MP</div>
                     <span class="logo-text">Cutting Tools</span>
                 </a>
                 <div class="nav-links">
-                    <a href="#products">Produits</a>
-                    <a href="#brands">Fournisseurs</a>
-                    <a href="#quote" class="nav-cta">Soumission</a>
+                    <a href="#products">Products</a>
+                    <a href="#brands">Suppliers</a>
+                    <a href="#quote" class="nav-cta">Get Quote</a>
                     <div class="lang-toggle">
-                        <a href="/">EN</a>
-                        <a href="/fr" class="active">FR</a>
+                        <a href="/" class="active">EN</a>
+                        <a href="/fr">FR</a>
                     </div>
                 </div>
             </div>
@@ -102,13 +108,13 @@ const industries = ["Ateliers d'Usinage", "Fabrication", "Équipes Maintenance",
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                         <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
                     </svg>
-                    Direct au Propriétaire
+                    Direct to Owner
                 </div>
-                <h1>Meilleurs Prix.<br><span>Parce Qu'on Sait Où Chercher.</span></h1>
-                <p>Outillage industriel, équipement de sécurité et fournitures MRO. 34 ans d'approvisionnement auprès de 50+ fournisseurs—la bonne pièce au bon prix, rapidement.</p>
+                <h1>Better Prices.<br><span>Because We Know Where to Look.</span></h1>
+                <p>Industrial tooling, safety equipment, and MRO supplies. 34 years of sourcing from 50+ suppliers means you get the right part at the right price—fast.</p>
                 <div class="hero-cta">
                     <a href="#quote" class="btn btn-primary">
-                        Demander Soumission
+                        Request Quote
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
@@ -117,20 +123,15 @@ const industries = ["Ateliers d'Usinage", "Fabrication", "Équipes Maintenance",
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
                         </svg>
-                        Appelez-nous
+                        Call Now
                     </a>
                 </div>
             </div>
             <div class="hero-image">
-                <div class="hero-image-placeholder">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <circle cx="12" cy="12" r="3"/>
-                        <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
-                    </svg>
-                </div>
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=85" alt="Precision CNC machining" class="hero-image-main">
                 <div class="hero-image-badge">
                     <span>34</span>
-                    Ans d'Expérience
+                    Years Experience
                 </div>
             </div>
         </div>
@@ -142,22 +143,22 @@ const industries = ["Ateliers d'Usinage", "Fabrication", "Équipes Maintenance",
             <div class="step">
                 <div class="step-number">1</div>
                 <div class="step-content">
-                    <h3>Envoyez Votre Liste</h3>
-                    <p>Numéros de pièces, photos, PDFs—ce que vous avez</p>
+                    <h3>Send Your List</h3>
+                    <p>Part numbers, photos, PDFs—whatever you've got</p>
                 </div>
             </div>
             <div class="step">
                 <div class="step-number">2</div>
                 <div class="step-content">
-                    <h3>On Confirme les Détails</h3>
-                    <p>Disponibilité, alternatives, délais—tout vérifié</p>
+                    <h3>We Confirm Details</h3>
+                    <p>Availability, alternates, lead times—all verified</p>
                 </div>
             </div>
             <div class="step">
                 <div class="step-number">3</div>
                 <div class="step-content">
-                    <h3>Soumission en 24h</h3>
-                    <p>Livraison ou ramassage dans le Grand Montréal</p>
+                    <h3>Quote in 24h</h3>
+                    <p>Delivery or pickup in Greater Montreal</p>
                 </div>
             </div>
         </div>
@@ -167,19 +168,13 @@ const industries = ["Ateliers d'Usinage", "Fabrication", "Équipes Maintenance",
     <section class="specialties" id="products">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Nos Spécialités</span>
-                <h2 class="section-title">Approvisionnement Spécialisé</h2>
+                <span class="section-label">What We're Best At</span>
+                <h2 class="section-title">Specialized Sourcing</h2>
             </div>
             <div class="specialties-grid">
                 {specialties.map((specialty) => (
                     <div class="specialty-card">
-                        <div class="specialty-image-placeholder">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                                <circle cx="8.5" cy="8.5" r="1.5"/>
-                                <polyline points="21 15 16 10 5 21"/>
-                            </svg>
-                        </div>
+                        <img src={specialty.image} alt={specialty.title} class="specialty-image">
                         <div class="specialty-content">
                             <h3>{specialty.title}</h3>
                             <p>{specialty.description}</p>
@@ -194,7 +189,7 @@ const industries = ["Ateliers d'Usinage", "Fabrication", "Équipes Maintenance",
     <section class="industries">
         <div class="container">
             <div class="industries-inner">
-                <span class="industries-label">Industries Desservies:</span>
+                <span class="industries-label">Industries Served:</span>
                 <div class="industries-list">
                     {industries.map((industry) => (
                         <span>{industry}</span>
@@ -209,43 +204,25 @@ const industries = ["Ateliers d'Usinage", "Fabrication", "Équipes Maintenance",
         <div class="container">
             <div class="showcase-grid">
                 <div class="showcase-images">
-                    <div class="showcase-img-placeholder">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                            <circle cx="8.5" cy="8.5" r="1.5"/>
-                            <polyline points="21 15 16 10 5 21"/>
-                        </svg>
-                    </div>
-                    <div class="showcase-img-placeholder">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                            <circle cx="8.5" cy="8.5" r="1.5"/>
-                            <polyline points="21 15 16 10 5 21"/>
-                        </svg>
-                    </div>
-                    <div class="showcase-img-placeholder">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                            <circle cx="8.5" cy="8.5" r="1.5"/>
-                            <polyline points="21 15 16 10 5 21"/>
-                        </svg>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&q=85" alt="CNC machining center" class="showcase-img">
+                    <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&q=85" alt="Precision tooling" class="showcase-img">
+                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&q=85" alt="Industrial manufacturing" class="showcase-img">
                 </div>
                 <div class="showcase-content">
-                    <h2>La Précision Compte.<br>Le Prix Aussi.</h2>
-                    <p>Depuis 1991, nous sommes le partenaire d'approvisionnement de confiance des ateliers montréalais. Un seul point de contact de la soumission à la livraison. Sans intermédiaire.</p>
+                    <h2>Precision Matters.<br>So Does Price.</h2>
+                    <p>Since 1991, we've been the sourcing partner Montreal shops trust when they need the right tool—not just any tool. One point of contact from quote to delivery. No handoffs, no runaround.</p>
                     <div class="showcase-stats">
                         <div class="stat">
                             <div class="stat-number">50+</div>
-                            <div class="stat-label">Partenaires Fournisseurs</div>
+                            <div class="stat-label">Supplier Partners</div>
                         </div>
                         <div class="stat">
                             <div class="stat-number">24h</div>
-                            <div class="stat-label">Délai de Soumission</div>
+                            <div class="stat-label">Quote Turnaround</div>
                         </div>
                         <div class="stat">
                             <div class="stat-number">34</div>
-                            <div class="stat-label">Années en Affaires</div>
+                            <div class="stat-label">Years in Business</div>
                         </div>
                     </div>
                 </div>
@@ -257,17 +234,17 @@ const industries = ["Ateliers d'Usinage", "Fabrication", "Équipes Maintenance",
     <section class="brands" id="brands">
         <div class="container">
             <div class="brands-header">
-                <span class="section-label">Réseau de Fournisseurs</span>
-                <h2 class="section-title">50+ Marques Disponibles</h2>
-                <p>Accès autorisé aux manufacturiers leaders de l'industrie</p>
+                <span class="section-label">Supplier Network</span>
+                <h2 class="section-title">50+ Brands We Source</h2>
+                <p>Authorized access to the industry's leading manufacturers</p>
             </div>
             <div class="brands-grid">
                 {brands.map((brand) => (
                     <div class="brand-card"><span>{brand}</span></div>
                 ))}
-                <div class="brand-card more"><span>+ Plusieurs Autres</span></div>
+                <div class="brand-card more"><span>+ Many More</span></div>
             </div>
-            <p class="brands-note">Votre marque n'apparaît pas? On peut probablement la trouver. Demandez-nous.</p>
+            <p class="brands-note">Don't see your brand? We can likely source it. Just ask.</p>
         </div>
     </section>
 
@@ -280,10 +257,10 @@ const industries = ["Ateliers d'Usinage", "Fabrication", "Équipes Maintenance",
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                             <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
                         </svg>
-                        Direct au Propriétaire
+                        Direct to Owner
                     </div>
-                    <h2>Obtenez Votre Soumission</h2>
-                    <p>Envoyez-nous votre liste de pièces, BOM, ou même une photo d'étiquette. On confirme la disponibilité, suggère des alternatives si nécessaire, et vous fournit un prix en 24 heures.</p>
+                    <h2>Get Your Quote Today</h2>
+                    <p>Send us your parts list, BOM, or even a photo of a label. We'll confirm availability, suggest alternates if needed, and get you pricing within 24 hours.</p>
                     <div class="quote-contact">
                         <a href={phoneHref}>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -301,60 +278,60 @@ const industries = ["Ateliers d'Usinage", "Fabrication", "Équipes Maintenance",
                     </div>
                 </div>
                 <div class="quote-form-wrapper">
-                    <form class="quote-form" name="quote-fr" method="POST" data-netlify="true" enctype="multipart/form-data">
-                        <input type="hidden" name="form-name" value="quote-fr" />
-                        <h3>Soumission Liste de Pièces</h3>
+                    <form class="quote-form" name="quote" method="POST" data-netlify="true" enctype="multipart/form-data">
+                        <input type="hidden" name="form-name" value="quote" />
+                        <h3>Parts List Quote</h3>
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="name">Votre Nom</label>
-                                <input type="text" id="name" name="name" placeholder="Jean Tremblay" required>
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Smith" required>
                             </div>
                             <div class="form-group">
-                                <label for="company">Entreprise</label>
-                                <input type="text" id="company" name="company" placeholder="ABC Manufacturier">
+                                <label for="company">Company</label>
+                                <input type="text" id="company" name="company" placeholder="ABC Manufacturing">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="email">Courriel</label>
-                                <input type="email" id="email" name="email" placeholder="jean@entreprise.com" required>
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="john@company.com" required>
                             </div>
                             <div class="form-group">
-                                <label for="phone">Téléphone</label>
+                                <label for="phone">Phone</label>
                                 <input type="tel" id="phone" name="phone" placeholder="(514) 555-0000">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group full">
-                                <label for="parts">Liste de Pièces</label>
-                                <textarea id="parts" name="parts" placeholder="Numéro de Pièce, Qté, Marque (une par ligne)&#10;Exemple:&#10;CNMG120408, 50, Sandvik&#10;Fraise 1/2 4FL, 10, Indifférent"></textarea>
-                                <small>Collez numéros de pièces, quantités, marques—ou décrivez vos besoins</small>
+                                <label for="parts">Parts List</label>
+                                <textarea id="parts" name="parts" placeholder="Part Number, Qty, Brand (one per line)&#10;Example:&#10;CNMG120408, 50, Sandvik&#10;1/2 End Mill 4FL, 10, Any"></textarea>
+                                <small>Paste part numbers, quantities, brands—or describe what you need</small>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="needby">Date Requise</label>
+                                <label for="needby">Need-by Date</label>
                                 <input type="date" id="needby" name="needby">
                             </div>
                             <div class="form-group">
-                                <label for="postal">Code Postal Livraison</label>
+                                <label for="postal">Delivery Postal Code</label>
                                 <input type="text" id="postal" name="postal" placeholder="H3B 1A7">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group full">
-                                <label for="files">Fichiers (Optionnel)</label>
+                                <label for="files">Upload Files (Optional)</label>
                                 <input type="file" id="files" name="files" accept=".pdf,.png,.jpg,.jpeg,.xlsx,.csv" multiple>
-                                <small>PDF, image, feuille BOM, ou photo d'étiquette</small>
+                                <small>PDF, image, BOM spreadsheet, or photo of label</small>
                             </div>
                         </div>
                         <div class="form-checkbox">
                             <input type="checkbox" id="alternates" name="alternates">
-                            <label for="alternates">Accepte des alternatives si l'original est indisponible</label>
+                            <label for="alternates">OK to suggest alternates if original unavailable</label>
                         </div>
                         <div class="form-submit">
                             <button type="submit" class="btn btn-primary">
-                                Envoyer la Demande
+                                Submit Quote Request
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                                     <path d="M5 12h14M12 5l7 7-7 7"/>
                                 </svg>
@@ -375,11 +352,11 @@ const industries = ["Ateliers d'Usinage", "Fabrication", "Équipes Maintenance",
                     <span class="footer-logo-text">Cutting Tools</span>
                 </div>
                 <div class="footer-links">
-                    <a href="#products">Produits</a>
-                    <a href="#brands">Fournisseurs</a>
-                    <a href="#quote">Soumission</a>
+                    <a href="#products">Products</a>
+                    <a href="#brands">Suppliers</a>
+                    <a href="#quote">Get Quote</a>
                 </div>
-                <div class="footer-text">© 2025 MP Cutting Tools — Au service de Montréal depuis 1991</div>
+                <div class="footer-text">© 2025 MP Cutting Tools — Serving Montreal since 1991</div>
             </div>
         </div>
     </footer>
